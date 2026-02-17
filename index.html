@@ -1,263 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Nikhil Patil's Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Patil | Data Enthusiast</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Fonts & Icons -->
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="./styles.css" </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-links">
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="nav-name">Nikhil Patil</div>
-    </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Data Enthusiast</h1>
-        <p class="hero-subtitle">Extract | Load | Analyse | Predict | Visualize</p>
-
-        <div class="hero-buttons">
-            <a href="#contact" class="btn primary">Get in Touch</a>
-            <a href="Nikhil_Resume.pdf" class="btn secondary" target="_blank">View Resume</a>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT ME -->
-<section id="about" class="about">
-    <div class="container">
-        <h2>About Me</h2>
-
-        <div class="code-box">
-            <div class="code-header">
-                <span>Python</span>
-                <button onclick="runCode()">▶ Run</button>
-            </div>
-
-<pre id="code">
-print("Who is Nikhil?")
-</pre>
-
-            <div id="output" class="output hidden">
-                <p>
-                    A Data Science graduate student with over two years of hands-on experience as a Data and Project Analyst, driven by a passion for turning complex data into clear, actionable business insights. I bring a strong foundation in analytics, statistical analysis, and data visualization, along with practical experience building end-to-end data pipelines that support informed decision-making. Proficient in Python, R, SQL, Spark, and ELT processes, I have worked in cloud-based environments, including Azure, to develop scalable and efficient data solutions.
-                    My work has helped organizations reduce processing time, improve data accuracy, and optimize workflows through innovative Python implementations and SQL performance tuning. I enjoy translating business requirements into technical solutions and presenting insights through intuitive dashboards and reports that resonate with both technical and non-technical stakeholders.
-                </p>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Nikhil Patil</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<!-- SKILLS -->
-<section id="skills" class="skills">
-    <div class="container">
-        <div class="skills-header">
-            <h2>Skills</h2>
-
-            <label class="switch">
-                <input type="checkbox" onclick="toggleSkills()">
-                <span class="slider"></span>
-            </label>
+    <!-- HERO -->
+    <section class="hero text-center">
+        <div class="container" data-aos="fade-up">
+            <h1>Data Enthusiast</h1>
+            <p class="lead mt-3">Extract | Load | Analyse | Predict | Visualize</p>
+            <div class="mt-4">
+                <a href="#contact" class="btn btn-light btn-lg me-2">Get in Touch</a>
+                <a href="Nikhil_Resume.pdf" target="_blank" class="btn btn-outline-light btn-lg">View Resume</a>
+            </div>
         </div>
+    </section>
 
-        <!-- TEXT SKILLS -->
-        <div id="skills-text">
-            <p><b>Programming Languages:</b> Python, R, Java, SQL </p>
-            <p><b>Libraries:</b> Matplotlib, Seaborn, NumPy, Pandas, Statsmodels, TensorFlow, PyTorch, Keras, SpaCy, NLTK, Tesseract </p>
-            <p><b>Data Visualization & Analytics Tools:</b> Tableau, Power BI, Looker, Alteryx</p>
-            <p><b>Database Solutions & Warehousing:</b> PostgreSQL, MySQL, MSSQL Server, Data Lakes & Warehousing, ETL/ELT</p>
-            <p><b></b>Big Data & Distributed Systems:</b> Apache Spark, PySpark, Hadoop</p>
-            <p><b>Cloud & Data Platforms:</b> Azure Data Factory (ADF), Databricks, AWS, GCP, Snowflake</p>
-            <p><b>Collaboration Tools:</b> Git, GitHub, Jupyter Notebook, Google Colab, Microsoft Office</p>
-            <p><b>Key Competencies:</b> Feature Engineering, Model Evaluation, Predictive & Statistical Analysis, Time-Series Forecasting & Predictive Modelling.</p>
+    <!-- ABOUT -->
+    <section class="section-padding bg-light" id="about">
+        <div class="container" data-aos="fade-right">
+            <h2 class="fw-bold mb-4">About Me</h2>
+
+            <div class="code-box">
+                <div class="code-header">
+                    <span>Python</span>
+                    <button onclick="runCode()">▶ Run</button>
+                </div>
+
+                <pre>print("Who is Nikhil?")</pre>
+
+                <div id="output" class="output hidden">
+                    <p>
+                        A Data Science graduate student with over two years of hands-on experience as a Data and Project
+                        Analyst,
+                        driven by a passion for turning complex data into clear, actionable business insights.
+                        I bring a strong foundation in analytics, statistical analysis, and data visualization, along
+                        with practical experience building end-to-end data pipelines that support informed
+                        decision-making.
+                        Proficient in Python, R, SQL, Spark, and ELT processes, I have worked in cloud-based
+                        environments,
+                        including Azure, to develop scalable and efficient data solutions.
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- CHART PLACEHOLDER -->
-        <div id="skills-chart" class="hidden">
-            <canvas id="radialSkills"></canvas>
-        </div>
-
-    </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="experience">
-    <div class="container">
-        <h2>Experience</h2>
-
-        <h3>University of Michigan Dearborn(UUE) - Information Ambassador</h3>
-        <span class="date">January 2025 – Present</span>
-
-        <ul>
-            <li>•	Serving as the welcoming first point of contact for new and prospective students at the university, helping them print their M Cards, talk through course selection, and explain transcript procedures. </li>
-            <li>•	Assisting students with various administrative tasks, including printing M Cards, providing guidance on course selection, and explaining transcript procedures to ensure a smooth onboarding experience.</li>
-        </ul>
-
-        <h3>Trainity - Data Analyst</h3>
-        <span class="date">January 2024 – August 2024</span>
-
-        <ul>
-            <li>•   Built and automated SQL-based ETL pipelines to extract, transform, and load 10,000+ operational records, improving data availability and reducing reporting latency</li>
-            <li>•   Performed data cleaning, transformation, and exploratory analysis using Python (Pandas, NumPy) to support operational analytics and decision-making.</li>
-            <li>•   Conducted statistical analysis, trend analysis, and feature engineering using Scikit-learn to identify root causes and improve predictive model performance by 20%.</li>
-        </ul>
-
-        <h3>ReapMind Innovations - Project Analyst</h3>
-        <span class="date">October 2022 – December 2023</span>
-
-        <ul>
-            <li>•   Designed and maintained SQL-driven data workflows to track user login, sign-up, and engagement data for the Happy Harvest Indian grocery platform.</li>
-            <li>•   Collaborated with software and stakeholders to ensure secure, scalable data capture aligned with web and mobile application workflows.</li>
-            <li>•   Integrated APIs with backend data systems to enable data-driven user management and reliable operational reporting with user activity and engagement data to
-                        maintain accurate records, identify usage patterns, and support informed decision-making.</li>
-            <li>•   Contributed to end-to-end solutions by aligning data collection, analytics, and dashboarding with business and technical requirements.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="projects">
-    <div class="container">
-        <h2>Projects</h2>
-
-        <div class="projects-grid">
-
-            <!-- Project 1 -->
-            <div class="project-card">
-                <h3>AGRI-X</h3>
-                <p>
-                    Data-driven agriculture analytics platform leveraging
-                    big data pipelines and cloud-based processing.
-                </p>
-                <a href="https://github.com/Serioushydra/AgriX-main" target="_blank">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
+    <!-- SKILLS -->
+    <section class="section-padding" id="skills">
+        <div class="container" data-aos="fade-up">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold">Skills</h2>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" onclick="toggleSkills()">
+                </div>
             </div>
 
+            <div id="skills-text">
+                <p><b>Programming Languages:</b> Python, R, Java, SQL</p>
+                <p><b>Libraries:</b> Matplotlib, Seaborn, NumPy, Pandas, Statsmodels, TensorFlow, PyTorch, Keras, SpaCy,
+                    NLTK, Tesseract</p>
+                <p><b>Data Visualization & Analytics Tools:</b> Tableau, Power BI, Looker, Alteryx</p>
+                <p><b>Database Solutions & Warehousing:</b> PostgreSQL, MySQL, MSSQL Server, Data Lakes & Warehousing,
+                    ETL/ELT</p>
+                <p><b>Big Data & Distributed Systems:</b> Apache Spark, PySpark, Hadoop</p>
+                <p><b>Cloud & Data Platforms:</b> Azure, AWS, GCP, Snowflake</p>
+                <p><b>Collaboration Tools:</b> Git, GitHub, Jupyter Notebook, Google Colab, Microsoft Office</p>
+                <p><b>Key Competencies:</b> Feature Engineering, Model Evaluation, Predictive & Statistical Analysis,
+                    Time-Series Forecasting & Predictive Modelling.</p>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <h3>FoodConnect- HackDearborn4</h3>
-                <p>
-                    Data-driven agriculture analytics platform leveraging
-                    big data pipelines and cloud-based processing.
-                </p>
-                <a href="https://github.com/ShubhamDoshi126/HackDearborn4" target="_blank">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
             </div>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <h3>Intelligent Triage of Customer Support Tickets</h3>
-                <p>
-                    Automated classification and prioritization of customer
-                    tickets using NLP and Spark-based processing.
-                </p>
-                <a href="https://github.com/Serioushydra/ece5831-2025-final-project" target="_blank">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card">
-                <h3>Energy Consumption Optimization</h3>
-                <p>
-                    Optimized energy usage analytics using large-scale
-                    time-series data and distributed processing.
-                </p>
-                <a href="https://github.com/Serioushydra/Energy-Consumption-Project" target="_blank">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="project-card">
-                <h3>NYC Job Posting Analytics</h3>
-                <p>
-                    Analyzed NYC job postings using Spark and SQL
-                    to extract market demand insights.
-                </p>
-                <a href="https://github.com/Serioushydra/Big_Data_Analytics-Visualization" target="_blank">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="project-card">
-                <h3>Retinal Disease Classification</h3>
-                <p>
-                    Deep learning–based image classification system
-                    for retinal disease detection.
-                </p>
-                <a href="https://github.com/Serioushydra/Retinal_Disease_Classification" target="_blank">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
+            <div id="skills-chart" class="hidden">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-12">
+                        <canvas id="radialSkills"></canvas>
+                    </div>
+                </div>
             </div>
 
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section-padding bg-light" id="experience">
+        <div class="container">
+            <h2 class="fw-bold mb-5" data-aos="fade-up">Experience</h2>
+
+            <div class="card p-4 mb-4" data-aos="fade-up">
+                <h5>University of Michigan Dearborn – Information Ambassador</h5>
+                <small>January 2025 – Present</small>
+                <ul class="mt-3">
+                    <li>Serving as the welcoming first point of contact for new and prospective students at the
+                        university, helping them print their M Cards, talk through course selection, and explain
+                        transcript procedures.</li>
+                    <li>Assisting students with various administrative tasks, including printing M Cards, providing
+                        guidance on course selection, and explaining transcript procedures to ensure a smooth onboarding
+                        experience.</li>
+                </ul>
+            </div>
+
+            <div class="card p-4 mb-4" data-aos="fade-up">
+                <h5>Trainity – Data Analyst</h5>
+                <small>January 2024 – August 2024</small>
+                <ul class="mt-3">
+                    <li>Built and automated SQL-based ETL pipelines to extract, transform, and load 10,000+ operational
+                        records, improving data availability and reducing reporting latency.</li>
+                    <li>Performed data cleaning, transformation, and exploratory analysis using Python (Pandas, NumPy)
+                        to support operational analytics and decision-making.</li>
+                    <li>Conducted statistical analysis, trend analysis, and feature engineering using Scikit-learn to
+                        identify root causes and improve predictive model performance by 20%.</li>
+                </ul>
+            </div>
+
+            <div class="card p-4" data-aos="fade-up">
+                <h5>ReapMind Innovations – Project Analyst</h5>
+                <small>October 2022 – December 2023</small>
+                <ul class="mt-3">
+                    <li>Designed and maintained SQL-driven data workflows to track user login, sign-up, and engagement
+                        data for the Happy Harvest Indian grocery platform.</li>
+                    <li>Collaborated with software and stakeholders to ensure secure, scalable data capture aligned with
+                        web and mobile application workflows.</li>
+                    <li>Integrated APIs with backend data systems to enable data-driven user management and reliable
+                        operational reporting with user activity and engagement data to maintain accurate records,
+                        identify usage patterns, and support informed decision-making.</li>
+                    <li>Contributed to end-to-end solutions by aligning data collection, analytics, and dashboarding
+                        with business and technical requirements.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section-padding" id="projects">
+        <div class="container">
+            <h2 class="fw-bold mb-5 text-center" data-aos="fade-up">Projects</h2>
+
+            <div class="row g-4">
+
+                <!-- Project Card -->
+                <div class="col-md-4 d-flex" data-aos="zoom-in">
+                    <div class="card p-4 d-flex flex-column w-100">
+                        <h5>AGRI-X</h5>
+                        <p class="flex-grow-1">
+                            Data-driven agriculture analytics platform leveraging
+                            big data pipelines and cloud-based processing.
+                        </p>
+                        <a href="https://github.com/Serioushydra/AgriX-main" target="_blank"
+                            class="btn btn-outline-primary mt-auto">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex" data-aos="zoom-in">
+                    <div class="card p-4 d-flex flex-column w-100">
+                        <h5>FoodConnect – HackDearborn4</h5>
+                        <p class="flex-grow-1">
+                            Data-driven agriculture analytics platform leveraging
+                            big data pipelines and cloud-based processing.
+                        </p>
+                        <a href="https://github.com/ShubhamDoshi126/HackDearborn4" target="_blank"
+                            class="btn btn-outline-primary mt-auto">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex" data-aos="zoom-in">
+                    <div class="card p-4 d-flex flex-column w-100">
+                        <h5>Intelligent Triage of Customer Support Tickets</h5>
+                        <p class="flex-grow-1">
+                            Automated classification and prioritization of customer
+                            tickets using NLP and Spark-based processing.
+                        </p>
+                        <a href="https://github.com/Serioushydra/ece5831-2025-final-project" target="_blank"
+                            class="btn btn-outline-primary mt-auto">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex" data-aos="zoom-in">
+                    <div class="card p-4 d-flex flex-column w-100">
+                        <h5>Energy Consumption Optimization</h5>
+                        <p class="flex-grow-1">
+                            Optimized energy usage analytics using large-scale
+                            time-series data and distributed processing.
+                        </p>
+                        <a href="https://github.com/Serioushydra/Energy-Consumption-Project" target="_blank"
+                            class="btn btn-outline-primary mt-auto">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex" data-aos="zoom-in">
+                    <div class="card p-4 d-flex flex-column w-100">
+                        <h5>NYC Job Posting Analytics</h5>
+                        <p class="flex-grow-1">
+                            Analyzed NYC job postings using Spark and SQL
+                            to extract market demand insights.
+                        </p>
+                        <a href="https://github.com/Serioushydra/Big_Data_Analytics-Visualization" target="_blank"
+                            class="btn btn-outline-primary mt-auto">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex" data-aos="zoom-in">
+                    <div class="card p-4 d-flex flex-column w-100">
+                        <h5>Retinal Disease Classification</h5>
+                        <p class="flex-grow-1">
+                            Deep learning–based image classification system
+                            for retinal disease detection.
+                        </p>
+                        <a href="https://github.com/Serioushydra/Retinal_Disease_Classification" target="_blank"
+                            class="btn btn-outline-primary mt-auto">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
+    <!-- EDUCATION -->
+    <section class="section-padding bg-light" id="education">
+        <div class="container" data-aos="fade-up">
+            <h2 class="fw-bold">Education</h2>
+            <p class="mt-4">
+                <b>MS in Data Science</b><br>
+                University of Michigan Dearborn | 2024–2026 | GPA: 3.67
+            </p>
+            <p>
+                <b>Bachelor of Engineering (ENTC)</b><br>
+                University of Pune | 2018–2022 | GPA: 8.8
+            </p>
+        </div>
+    </section>
 
-<!-- EDUCATION -->
-<section id="education" class="education">
-    <div class="container">
-        <h2>Education</h2>
+    <!-- CONTACT -->
+    <section class="section-padding footer text-center" id="contact">
+        <h2 class="fw-bold mb-4">Contact Me</h2>
+        <div class="socials">
+            <a href="https://github.com/Serioushydra"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:panikhil@umich.edu"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
 
-        <p><b>Master of Science in Data Science</b><br>
-        University of Michigan, Dearborn, Michigan  | 2024–2026<br>
-        3.67 GPA</p>
-        <p><b>Bachelor of Engineering in Electronics and Telecommunication</b><br>
-        University of Pune (SPPU), MH, India | 2018–2022<br>
-        8.8 GPA</p>
-    </div>
-</section>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <h2>Contact Me</h2>
+    <script>
+        AOS.init({ duration: 900, once: true });
 
-    <div class="socials">
-        <a href="https://github.com/Serioushydra"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:panikhil@umich.edu"><i class="fas fa-envelope"></i></a>
-    </div>
-</section>
+        function runCode() {
+            document.getElementById("output").classList.remove("hidden");
+        }
 
-<script>
-function runCode() {
-    document.getElementById("output").classList.remove("hidden");
-}
+        function toggleSkills() {
+            document.getElementById("skills-text").classList.toggle("hidden");
+            document.getElementById("skills-chart").classList.toggle("hidden");
+        }
 
-function toggleSkills() {
-    document.getElementById("skills-text").classList.toggle("hidden");
-    document.getElementById("skills-chart").classList.toggle("hidden");
-}
-</script>
-<!-- Chart.js FIRST -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<!-- Your script SECOND -->
-<script src="script.js"></script>
+        new Chart(document.getElementById("radialSkills"), {
+            type: "doughnut",
+            data: {
+                labels: ["Programming", "ML / AI", "Visualization", "Big Data", "Cloud", "Databases"],
+                datasets: [{
+                    data: [30, 25, 20, 15, 12, 10],
+                    backgroundColor: ["#0d6efd", "#6610f2", "#198754", "#ffc107", "#fd7e14", "#dc3545"]
+                }]
+            },
+            options: {
+                cutout: "55%",
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
 
 </body>
+
 </html>
