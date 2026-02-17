@@ -174,3 +174,14 @@ input:checked + .slider:before {
     max-width: 600px;
     margin: 40px auto 0;
 }
+
+#skills-chart {
+    width: 420px;
+    height: 420px;
+    margin: 40px auto;
+}
+
+#skills-chart canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
